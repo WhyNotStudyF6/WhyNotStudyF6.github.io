@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>waku的博客</title>
+    <link>https://WhyNotStudyF6.github.io/</link>
+    <description>Recent content on waku的博客</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 28 Jun 2026 17:39:27 +0900</lastBuildDate>
+    <atom:link href="https://WhyNotStudyF6.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>盘子</title>
+      <link>https://WhyNotStudyF6.github.io/gallery/dish/</link>
+      <pubDate>Sun, 28 Jun 2026 17:39:27 +0900</pubDate>
+      <guid>https://WhyNotStudyF6.github.io/gallery/dish/</guid>
+      <description>&lt;p&gt;![盘子](&lt;a href=&#34;https://whynotstudyf6.github.io/images/dish.png&#34;&gt;https://whynotstudyf6.github.io/images/dish.png&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>窗户</title>
+      <link>https://WhyNotStudyF6.github.io/posts/tutorial/</link>
+      <pubDate>Sun, 28 Jun 2026 17:39:27 +0900</pubDate>
+      <guid>https://WhyNotStudyF6.github.io/posts/tutorial/</guid>
+      <description>&lt;p&gt;这是一篇带图片的教程。&lt;/p&gt;
+&lt;p&gt;![窗户](&lt;a href=&#34;https://whynotstudyf6.github.io/images/dish.png&#34;&gt;https://whynotstudyf6.github.io/images/dish.png&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;图片上面是一个mado。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>第一篇文章</title>
+      <link>https://WhyNotStudyF6.github.io/posts/first/</link>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://WhyNotStudyF6.github.io/posts/first/</guid>
+      <description>&lt;p&gt;这是我的第一篇博客文章，用于测试！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
