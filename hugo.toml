@@ -1,4 +1,6 @@
 baseURL = "https://WhyNotStudyF6.github.io/"
 languageCode = "zh-cn"
-title = "我的博客"
+title = "waku的博客"
 theme = "PaperMod"
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
