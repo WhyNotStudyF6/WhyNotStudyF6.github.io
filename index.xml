@@ -6,20 +6,13 @@
     <description>Recent content on waku的博客</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Jun 2026 17:39:27 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://WhyNotStudyF6.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>盘子</title>
-      <link>https://WhyNotStudyF6.github.io/gallery/dish/</link>
-      <pubDate>Sun, 28 Jun 2026 17:39:27 +0900</pubDate>
-      <guid>https://WhyNotStudyF6.github.io/gallery/dish/</guid>
-      <description>&lt;p&gt;![盘子](&lt;a href=&#34;https://whynotstudyf6.github.io/images/dish.png&#34;&gt;https://whynotstudyf6.github.io/images/dish.png&lt;/a&gt;)&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>如何免费搭建个人博客</title>
-      <link>https://WhyNotStudyF6.github.io/posts/first/</link>
+      <title>1.如何免费搭建个人博客</title>
+      <link>https://WhyNotStudyF6.github.io/wfvh/01-build-blog/</link>
       <pubDate>Sun, 28 Jun 2026 00:00:00 +0900</pubDate>
-      <guid>https://WhyNotStudyF6.github.io/posts/first/</guid>
+      <guid>https://WhyNotStudyF6.github.io/wfvh/01-build-blog/</guid>
       <description>&lt;p&gt;本教程教你使用 Hugo + GitHub Pages 搭建个人博客，完全免费，电脑不用一直开着别人也能访问。&lt;/p&gt;
 &lt;h2 id=&#34;第一步安装-git&#34;&gt;第一步：安装 Git&lt;/h2&gt;
 &lt;p&gt;去 &lt;a href=&#34;https://git-scm.com/download/win&#34;&gt;https://git-scm.com/download/win&lt;/a&gt; 下载 64-bit 版本，一路默认安装。&lt;/p&gt;
@@ -60,10 +53,10 @@ theme = &amp;quot;PaperMod&amp;quot;
 &lt;p&gt;打开文件，把 draft = true 改成 draft = false，写上内容保存。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>如何开放博客 JSON API</title>
-      <link>https://WhyNotStudyF6.github.io/posts/tutorial/</link>
+      <title>2.如何开放博客 JSON API</title>
+      <link>https://WhyNotStudyF6.github.io/wfvh/02-json-api/</link>
       <pubDate>Sun, 28 Jun 2026 00:00:00 +0900</pubDate>
-      <guid>https://WhyNotStudyF6.github.io/posts/tutorial/</guid>
+      <guid>https://WhyNotStudyF6.github.io/wfvh/02-json-api/</guid>
       <description>&lt;p&gt;本教程介绍如何让别人通过 API 获取你博客的文章和图片内容。&lt;/p&gt;
 &lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
 &lt;p&gt;Hugo 博客支持输出 JSON 格式，开启后别人可以直接通过 URL 获取文章数据，不需要任何后端服务器。&lt;/p&gt;

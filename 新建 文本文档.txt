@@ -1,0 +1,6 @@
+content/
+├── wfvh/          ← 文字教程
+│   ├── 01-build-blog.md
+│   └── 02-json-api.md
+└── tupm/        ← 图片专区
+    └── idhu.md     ← 每张图片一个md文件

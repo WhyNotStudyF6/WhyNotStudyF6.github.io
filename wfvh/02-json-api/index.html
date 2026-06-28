@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>如何开放博客 JSON API | waku的博客</title>
+<title>2.如何开放博客 JSON API | waku的博客</title>
 <meta name="keywords" content="">
 <meta name="description" content="本教程介绍如何让别人通过 API 获取你博客的文章和图片内容。
 原理
@@ -26,7 +26,7 @@ hugo new content gallery/图片名.md
 
 文章内容只放图片链接：">
 <meta name="author" content="">
-<link rel="canonical" href="https://WhyNotStudyF6.github.io/posts/tutorial/">
+<link rel="canonical" href="https://WhyNotStudyF6.github.io/wfvh/02-json-api/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://WhyNotStudyF6.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://WhyNotStudyF6.github.io/favicon-16x16.png">
@@ -35,7 +35,7 @@ hugo new content gallery/图片名.md
 <link rel="mask-icon" href="https://WhyNotStudyF6.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://WhyNotStudyF6.github.io/posts/tutorial/">
+<link rel="alternate" hreflang="en" href="https://WhyNotStudyF6.github.io/wfvh/02-json-api/">
 <noscript>
     <style>
         #theme-toggle,
@@ -81,9 +81,9 @@ hugo new content gallery/图片名.md
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="https://WhyNotStudyF6.github.io/posts/tutorial/">
+</script><meta property="og:url" content="https://WhyNotStudyF6.github.io/wfvh/02-json-api/">
   <meta property="og:site_name" content="waku的博客">
-  <meta property="og:title" content="如何开放博客 JSON API">
+  <meta property="og:title" content="2.如何开放博客 JSON API">
   <meta property="og:description" content="本教程介绍如何让别人通过 API 获取你博客的文章和图片内容。
 原理 Hugo 博客支持输出 JSON 格式，开启后别人可以直接通过 URL 获取文章数据，不需要任何后端服务器。
 第一步：开启 JSON 输出 打开 hugo.toml，添加以下配置：
@@ -91,12 +91,12 @@ hugo new content gallery/图片名.md
 {{- $pages := .Pages -}} [{{ range $i, $e := $pages }}{{ if $i }},{{ end }}{&#34;title&#34;:{{ .Title | jsonify }},&#34;permalink&#34;:{{ .Permalink | jsonify }},&#34;content&#34;:{{ .Plain | jsonify }},&#34;summary&#34;:{{ .Summary | jsonify }}}{{ end }}] 第三步：建立图片分类 hugo new content gallery/图片名.md 文章内容只放图片链接：">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
+    <meta property="article:section" content="wfvh">
     <meta property="article:published_time" content="2026-06-28T00:00:00+09:00">
     <meta property="article:modified_time" content="2026-06-28T00:00:00+09:00">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="如何开放博客 JSON API">
+  <meta name="twitter:title" content="2.如何开放博客 JSON API">
   <meta name="twitter:description" content="本教程介绍如何让别人通过 API 获取你博客的文章和图片内容。
 原理 Hugo 博客支持输出 JSON 格式，开启后别人可以直接通过 URL 获取文章数据，不需要任何后端服务器。
 第一步：开启 JSON 输出 打开 hugo.toml，添加以下配置：
@@ -112,14 +112,14 @@ hugo new content gallery/图片名.md
     {
       "@type": "ListItem",
       "position":  1 ,
-      "name": "Posts",
-      "item": "https://WhyNotStudyF6.github.io/posts/"
+      "name": "Wfvhs",
+      "item": "https://WhyNotStudyF6.github.io/wfvh/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "如何开放博客 JSON API",
-      "item": "https://WhyNotStudyF6.github.io/posts/tutorial/"
+      "name": "2.如何开放博客 JSON API",
+      "item": "https://WhyNotStudyF6.github.io/wfvh/02-json-api/"
     }
   ]
 }
@@ -128,8 +128,8 @@ hugo new content gallery/图片名.md
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "如何开放博客 JSON API",
-  "name": "如何开放博客 JSON API",
+  "headline": "2.如何开放博客 JSON API",
+  "name": "2.如何开放博客 JSON API",
   "description": "本教程介绍如何让别人通过 API 获取你博客的文章和图片内容。\n原理 Hugo 博客支持输出 JSON 格式，开启后别人可以直接通过 URL 获取文章数据，不需要任何后端服务器。\n第一步：开启 JSON 输出 打开 hugo.toml，添加以下配置：\n[outputs] home = [\u0026quot;HTML\u0026quot;, \u0026quot;RSS\u0026quot;, \u0026quot;JSON\u0026quot;] section = [\u0026quot;HTML\u0026quot;, \u0026quot;RSS\u0026quot;, \u0026quot;JSON\u0026quot;] 第二步：添加 section JSON 模板 新建文件 layouts/_default/list.json.json，内容：\n{{- $pages := .Pages -}} [{{ range $i, $e := $pages }}{{ if $i }},{{ end }}{\u0026quot;title\u0026quot;:{{ .Title | jsonify }},\u0026quot;permalink\u0026quot;:{{ .Permalink | jsonify }},\u0026quot;content\u0026quot;:{{ .Plain | jsonify }},\u0026quot;summary\u0026quot;:{{ .Summary | jsonify }}}{{ end }}] 第三步：建立图片分类 hugo new content gallery/图片名.md 文章内容只放图片链接：\n",
   "keywords": [
     
@@ -141,7 +141,7 @@ hugo new content gallery/图片名.md
   "dateModified": "2026-06-28T00:00:00+09:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://WhyNotStudyF6.github.io/posts/tutorial/"
+    "@id": "https://WhyNotStudyF6.github.io/wfvh/02-json-api/"
   },
   "publisher": {
     "@type": "Organization",
@@ -192,7 +192,7 @@ hugo new content gallery/图片名.md
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      如何开放博客 JSON API
+      2.如何开放博客 JSON API
     </h1>
     <div class="post-meta">
 
