@@ -14,9 +14,7 @@ title = '窗户'
 
 
 
-!\[窗户](https://whynotstudyf6.github.io/images/dish.png)
-
-
+<img src="https://whynotstudyf6.github.io/images/dish.png" alt="窗户">
 
 图片上面是一个mado。
 
