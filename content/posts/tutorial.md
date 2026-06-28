@@ -1,12 +1,12 @@
-\---
++++
 
-title: "窗户"
+date = '2026-06-28T17:39:27+09:00'
 
-date: 2026-06-28
+draft = false
 
-draft: false
+title = '窗户'
 
-\---
++++
 
 
 
