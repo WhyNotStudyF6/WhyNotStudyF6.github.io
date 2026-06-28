@@ -1,7 +1,9 @@
 +++
 date = '2026-06-28T00:00:00+09:00'
 draft = false
-title = '如何开放博客 JSON API'
+url = '/wfvh/02-json-api/'
+title = '2.如何开放博客 JSON API'
+weight = 2
 +++
 
 本教程介绍如何让别人通过 API 获取你博客的文章和图片内容。

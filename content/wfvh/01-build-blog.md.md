@@ -1,7 +1,9 @@
 +++
 date = '2026-06-28T00:00:00+09:00'
 draft = false
-title = '如何免费搭建个人博客'
+url = '/wfvh/01-build-blog/'
+title = '1.如何免费搭建个人博客'
+weight = 1
 +++
 
 本教程教你使用 Hugo + GitHub Pages 搭建个人博客，完全免费，电脑不用一直开着别人也能访问。
