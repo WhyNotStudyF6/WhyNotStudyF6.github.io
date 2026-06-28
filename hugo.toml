@@ -2,6 +2,16 @@ baseURL = "https://WhyNotStudyF6.github.io/"
 title = "waku的博客"
 theme = "PaperMod"
 
+[params]
+  homeInfoParams = true
+  [params.homeInfoParams]
+    Title = "👋 你好，我是waku"
+    Content = "这里是我的学习分享博客，记录教程和图片"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/WhyNotStudyF6"
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS", "JSON"]
