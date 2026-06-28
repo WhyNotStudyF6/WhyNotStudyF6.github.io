@@ -71,10 +71,8 @@ theme = &amp;quot;PaperMod&amp;quot;
 &lt;pre&gt;&lt;code&gt;{{- $pages := .Pages -}}
 [{{ range $i, $e := $pages }}{{ if $i }},{{ end }}{&amp;quot;title&amp;quot;:{{ .Title | jsonify }},&amp;quot;permalink&amp;quot;:{{ .Permalink | jsonify }},&amp;quot;content&amp;quot;:{{ .Plain | jsonify }},&amp;quot;summary&amp;quot;:{{ .Summary | jsonify }}}{{ end }}]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;第三步建立图片分类&#34;&gt;第三步：建立图片分类&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;hugo new content gallery/图片名.md
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;文章内容只放图片链接：&lt;/p&gt;</description>
+&lt;h2 id=&#34;第三步建立图片列表&#34;&gt;第三步：建立图片列表&lt;/h2&gt;
+&lt;p&gt;在 static/ 下新建 images.json，列出所有图片路径：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
