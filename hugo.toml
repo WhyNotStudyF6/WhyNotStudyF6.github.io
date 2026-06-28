@@ -3,7 +3,6 @@ title = "waku的博客"
 theme = "PaperMod"
 
 [params]
-  homeInfoParams = true
   [params.homeInfoParams]
     Title = "👋 你好，我是waku"
     Content = "这里是我的学习分享博客，记录教程和图片"
