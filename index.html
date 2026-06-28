@@ -150,33 +150,44 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">窗户
+    <h2 class="entry-hint-parent">如何免费搭建个人博客
     </h2>
   </header>
   <div class="entry-content">
-    <p>这是一篇带图片的教程。
-图片上面是一个mado。
-</p>
+    <p>本教程教你使用 Hugo &#43; GitHub Pages 搭建个人博客，完全免费，电脑不用一直开着别人也能访问。
+第一步：安装 Git 去 https://git-scm.com/download/win 下载 64-bit 版本，一路默认安装。
+安装完重新打开 cmd，验证：
+git --version 显示版本号说明安装成功。
+第二步：安装 Hugo 去 https://github.com/gohugoio/hugo/releases/latest 下载 hugo_extended_windows_amd64.zip。
+解压后把 hugo.exe 放到 D:\soft\hugo\，然后把 D:\soft\hugo 添加到系统环境变量 Path。
+验证：
+hugo version 第三步：建站 D: cd D:\soft hugo new site myblog cd myblog git init git remote add origin https://github.com/你的用户名/你的用户名.github.io.git 第四步：安装主题 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 第五步：配置站点 打开 hugo.toml，替换成：
+baseURL = &#34;https://你的用户名.github.io/&#34; title = &#34;我的博客&#34; theme = &#34;PaperMod&#34; [outputs] home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;] section = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;] 第六步：写第一篇文章 hugo new content posts/first.md 打开文件，把 draft = true 改成 draft = false，写上内容保存。
+...</p>
   </div>
   <footer class="entry-footer">
 
-<span title='2026-06-28 17:39:27 +0900 +0900'>June 28, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to 窗户" href="https://WhyNotStudyF6.github.io/posts/tutorial/"></a>
+<span title='2026-06-28 00:00:00 +0900 +0900'>June 28, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to 如何免费搭建个人博客" href="https://WhyNotStudyF6.github.io/posts/first/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">第一篇文章
+    <h2 class="entry-hint-parent">如何开放博客 JSON API
     </h2>
   </header>
   <div class="entry-content">
-    <p>这是我的第一篇博客文章，用于测试！
-</p>
+    <p>本教程介绍如何让别人通过 API 获取你博客的文章和图片内容。
+原理 Hugo 博客支持输出 JSON 格式，开启后别人可以直接通过 URL 获取文章数据，不需要任何后端服务器。
+第一步：开启 JSON 输出 打开 hugo.toml，添加以下配置：
+[outputs] home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;] section = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;] 第二步：添加 section JSON 模板 新建文件 layouts/_default/list.json.json，内容：
+{{- $pages := .Pages -}} [{{ range $i, $e := $pages }}{{ if $i }},{{ end }}{&#34;title&#34;:{{ .Title | jsonify }},&#34;permalink&#34;:{{ .Permalink | jsonify }},&#34;content&#34;:{{ .Plain | jsonify }},&#34;summary&#34;:{{ .Summary | jsonify }}}{{ end }}] 第三步：建立图片分类 hugo new content gallery/图片名.md 文章内容只放图片链接：
+...</p>
   </div>
   <footer class="entry-footer">
 
-<span title='2026-06-28 00:00:00 +0000 UTC'>June 28, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to 第一篇文章" href="https://WhyNotStudyF6.github.io/posts/first/"></a>
+<span title='2026-06-28 00:00:00 +0900 +0900'>June 28, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to 如何开放博客 JSON API" href="https://WhyNotStudyF6.github.io/posts/tutorial/"></a>
 </article>
     </main>
     

@@ -16,20 +16,72 @@
       <description>&lt;p&gt;![盘子](&lt;a href=&#34;https://whynotstudyf6.github.io/images/dish.png&#34;&gt;https://whynotstudyf6.github.io/images/dish.png&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
     <item>
-      <title>窗户</title>
-      <link>https://WhyNotStudyF6.github.io/posts/tutorial/</link>
-      <pubDate>Sun, 28 Jun 2026 17:39:27 +0900</pubDate>
-      <guid>https://WhyNotStudyF6.github.io/posts/tutorial/</guid>
-      <description>&lt;p&gt;这是一篇带图片的教程。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;图片上面是一个mado。&lt;/p&gt;</description>
+      <title>如何免费搭建个人博客</title>
+      <link>https://WhyNotStudyF6.github.io/posts/first/</link>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 +0900</pubDate>
+      <guid>https://WhyNotStudyF6.github.io/posts/first/</guid>
+      <description>&lt;p&gt;本教程教你使用 Hugo + GitHub Pages 搭建个人博客，完全免费，电脑不用一直开着别人也能访问。&lt;/p&gt;
+&lt;h2 id=&#34;第一步安装-git&#34;&gt;第一步：安装 Git&lt;/h2&gt;
+&lt;p&gt;去 &lt;a href=&#34;https://git-scm.com/download/win&#34;&gt;https://git-scm.com/download/win&lt;/a&gt; 下载 64-bit 版本，一路默认安装。&lt;/p&gt;
+&lt;p&gt;安装完重新打开 cmd，验证：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示版本号说明安装成功。&lt;/p&gt;
+&lt;h2 id=&#34;第二步安装-hugo&#34;&gt;第二步：安装 Hugo&lt;/h2&gt;
+&lt;p&gt;去 &lt;a href=&#34;https://github.com/gohugoio/hugo/releases/latest&#34;&gt;https://github.com/gohugoio/hugo/releases/latest&lt;/a&gt; 下载 hugo_extended_windows_amd64.zip。&lt;/p&gt;
+&lt;p&gt;解压后把 hugo.exe 放到 D:\soft\hugo\，然后把 D:\soft\hugo 添加到系统环境变量 Path。&lt;/p&gt;
+&lt;p&gt;验证：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;第三步建站&#34;&gt;第三步：建站&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;D:
+cd D:\soft
+hugo new site myblog
+cd myblog
+git init
+git remote add origin https://github.com/你的用户名/你的用户名.github.io.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;第四步安装主题&#34;&gt;第四步：安装主题&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;第五步配置站点&#34;&gt;第五步：配置站点&lt;/h2&gt;
+&lt;p&gt;打开 hugo.toml，替换成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;baseURL = &amp;quot;https://你的用户名.github.io/&amp;quot;
+title = &amp;quot;我的博客&amp;quot;
+theme = &amp;quot;PaperMod&amp;quot;
+
+[outputs]
+  home = [&amp;quot;HTML&amp;quot;, &amp;quot;RSS&amp;quot;, &amp;quot;JSON&amp;quot;]
+  section = [&amp;quot;HTML&amp;quot;, &amp;quot;RSS&amp;quot;, &amp;quot;JSON&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;第六步写第一篇文章&#34;&gt;第六步：写第一篇文章&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;hugo new content posts/first.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;打开文件，把 draft = true 改成 draft = false，写上内容保存。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>第一篇文章</title>
-      <link>https://WhyNotStudyF6.github.io/posts/first/</link>
-      <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://WhyNotStudyF6.github.io/posts/first/</guid>
-      <description>&lt;p&gt;这是我的第一篇博客文章，用于测试！&lt;/p&gt;</description>
+      <title>如何开放博客 JSON API</title>
+      <link>https://WhyNotStudyF6.github.io/posts/tutorial/</link>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 +0900</pubDate>
+      <guid>https://WhyNotStudyF6.github.io/posts/tutorial/</guid>
+      <description>&lt;p&gt;本教程介绍如何让别人通过 API 获取你博客的文章和图片内容。&lt;/p&gt;
+&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+&lt;p&gt;Hugo 博客支持输出 JSON 格式，开启后别人可以直接通过 URL 获取文章数据，不需要任何后端服务器。&lt;/p&gt;
+&lt;h2 id=&#34;第一步开启-json-输出&#34;&gt;第一步：开启 JSON 输出&lt;/h2&gt;
+&lt;p&gt;打开 hugo.toml，添加以下配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[outputs]
+  home = [&amp;quot;HTML&amp;quot;, &amp;quot;RSS&amp;quot;, &amp;quot;JSON&amp;quot;]
+  section = [&amp;quot;HTML&amp;quot;, &amp;quot;RSS&amp;quot;, &amp;quot;JSON&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;第二步添加-section-json-模板&#34;&gt;第二步：添加 section JSON 模板&lt;/h2&gt;
+&lt;p&gt;新建文件 layouts/_default/list.json.json，内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{- $pages := .Pages -}}
+[{{ range $i, $e := $pages }}{{ if $i }},{{ end }}{&amp;quot;title&amp;quot;:{{ .Title | jsonify }},&amp;quot;permalink&amp;quot;:{{ .Permalink | jsonify }},&amp;quot;content&amp;quot;:{{ .Plain | jsonify }},&amp;quot;summary&amp;quot;:{{ .Summary | jsonify }}}{{ end }}]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;第三步建立图片分类&#34;&gt;第三步：建立图片分类&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;hugo new content gallery/图片名.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;文章内容只放图片链接：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
