@@ -1,0 +1,2 @@
+{{- $pages := .Pages -}}
+[{{ range $i, $e := $pages }}{{ if $i }},{{ end }}{"title":{{ .Title | jsonify }},"permalink":{{ .Permalink | jsonify }},"content":{{ .Plain | jsonify }},"summary":{{ .Summary | jsonify }}}{{ end }}]
