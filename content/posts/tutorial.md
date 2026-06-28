@@ -14,7 +14,7 @@ title = '窗户'
 
 
 
-!\[窗户](/images/窗户.png)
+!\[窗户](/images/dish.png)
 
 
 
