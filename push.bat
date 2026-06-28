@@ -1,3 +1,4 @@
+chcp 65001
 @echo off
 cd /d D:\soft\myblog
 git add .
